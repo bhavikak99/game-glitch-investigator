@@ -1,8 +1,9 @@
 import sys
 from pathlib import Path
 
+
 sys.path.append(str(Path(__file__).resolve().parents[1]))
-from logic_utils import check_guess
+from logic_utils import check_guess, parse_guess
 
 def test_winning_guess():
     # If the secret is 50 and guess is 50, it should be a win
@@ -21,3 +22,23 @@ def test_guess_too_low():
     outcome, message = check_guess(40, 50)
     assert outcome == "Too Low"
     assert message == "📈 Go HIGHER!"
+
+def test_parse_guess_invalid_text():
+    ok, value, error = parse_guess("abc")
+    assert ok is False
+    assert value is None
+    assert error == "That is not a number."
+
+
+def test_parse_guess_decimal():
+    ok, value, error = parse_guess("42.7")
+    assert ok is True
+    assert value == 42
+    assert error is None
+
+
+def test_parse_guess_negative_number():
+    ok, value, error = parse_guess("-5")
+    assert ok is True
+    assert value == -5
+    assert error is None
