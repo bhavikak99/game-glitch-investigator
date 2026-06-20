@@ -46,7 +46,7 @@ Add professional docstrings to every function in logic_utils.py and review the f
 **Linting output before:**
 
 ```
-No formal linter was run. I reviewed the file manually and used pytest to confirm the changes did not break behavior.
+No linter was run. I reviewed the file manually and used pytest to confirm the changes did not break behavior.
 ```
 
 **Changes applied:**
@@ -61,15 +61,13 @@ I added more detailed docstrings to the functions in logic_utils.py. I also impr
 
 **Task given to both models:**
 
-<!-- Describe what you asked each model to do -->
-
 | | Model A | Model B |
 |-|---------|---------|
-| **Model name** | | |
-| **Response summary** | | |
-| **More Pythonic?** | | |
-| **Clearer explanation?** | | |
+| **Model name** | ChatGPT | VSCode AI Assistant |
+| **Response summary** | Identified that the hint messages in check_guess() were reversed and explained the logic. | Identified the same bug and pointed to the incorrect return messages in the function. |
+| **More Pythonic?** | Similar | Similar |
+| **Clearer explanation?** | Yes | Somewhat |
 
 **Which did you prefer and why?**
 
-<!-- Your conclusion -->
+I preferred ChatGPT because it explained the logic in more detail. The VS Code AI assistant was useful because it identified the exact lines that needed to be changed.
