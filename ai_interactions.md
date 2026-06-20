@@ -1,7 +1,5 @@
 # AI Interactions Log
 
-> **Stretch features only.** Only fill in the sections that apply to stretch features you attempted. If you did not attempt a stretch feature, leave its section blank or delete it. This file is not required for the core project.
-
 ---
 
 ## Agent Workflow (SF8)
@@ -39,19 +37,16 @@ I manually tested the app and saw the history display felt delayed. I fixed this
 
 **Prompt used:**
 
-```
 Add professional docstrings to every function in logic_utils.py and review the file for simple PEP 8 readability issues.
-```
 
 **Linting output before:**
 
-```
-No linter was run. I reviewed the file manually and used pytest to confirm the changes did not break behavior.
-```
+$ python3 -m flake8 logic_utils.py
+logic_utils.py:109:25: W292 no newline at end of file
 
 **Changes applied:**
 
-I added more detailed docstrings to the functions in logic_utils.py. I also improved readability by spacing functions and simplifying one else branch in check_guess(). After the documentation, I ran pytest and confirmed that all 6 tests passed.
+I added more detailed docstrings to the functions in logic_utils.py. I also improved readability by spacing functions and simplifying one else branch in check_guess(). I also fixed the flake8 warning by adding a newline at the end of the file. After making the changes, I ran pytest and confirmed that all 6 tests passed.
 
 ---
 
@@ -60,6 +55,7 @@ I added more detailed docstrings to the functions in logic_utils.py. I also impr
 > Compare two AI models on the same task.
 
 **Task given to both models:**
+Explain why the guessing game gives incorrect hints and suggest a fix.
 
 | | Model A | Model B |
 |-|---------|---------|
