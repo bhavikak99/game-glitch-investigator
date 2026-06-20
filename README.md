@@ -25,28 +25,36 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- The game is a Streamlit number guessing game where the player tries to guess a secret number within a limited number of attempts. 
+- I found that the hint messages were reversed, so guesses above the secret number said "GO HIGHER" and guesses below the secret number said "GO LOWER."
+- I also found that the New Game button did not restart the game because some Streamlit session state values were not reset.
+- I fixed the hint logic, reset the session state values for a new game, moved check_guess() into logic_utils.py and updated pytest tests.
 
 ## 📸 Demo Walkthrough
 
-Describe your fixed game in numbered steps so a reader can follow along without watching a video:
+1. User starts the app and selects a difficulty level
+2. User opens Developer Debug Info to view the secret number for testing
+3. User enters a guess below the secret number and the game returns "GO HIGHER"
+4. User enters a guess above the secret number and the game returns "GO LOWER"
+5. User enters the correct secret number and the game shows a win message with the final score
+6. User clicks "New Game" and the app resets the secret number, score, attempts, status and guess history.
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+## Screenshot
 
-**Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
+![Winning Game](screenshot-winning-game.png)
+
 
 ## 🧪 Test Results
 
-```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+```text
+$ pytest
+=================== test session starts ===================
+platform darwin -- Python 3.14.5, pytest-9.1.1, pluggy-1.6.0
+collected 3 items
+
+tests/test_game_logic.py ...                        [100%]
+
+==================== 3 passed in 0.02s ====================
 ```
 
 ## 🚀 Stretch Features
