@@ -58,4 +58,4 @@ Streamlit reruns the whole script whenever the user interacts with a botton or i
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
 
-I want to reuse testing one bug at a time instead of trying to fix everything at once. I also want to keep using pytest. Next time I work with AI on code I would ask it to explain the logic before asking it to fix. Th project made me realize that AI generated code can look great but still contain bugs. So I need to verify it with my own tests. 
+I want to reuse testing one bug at a time instead of trying to fix everything at once. I also want to keep using pytest. Next time I work with AI on code I would ask it to explain the logic before asking it to fix. This project made me realize that AI generated code can look great but still contain bugs. So I need to verify it with my own tests. 

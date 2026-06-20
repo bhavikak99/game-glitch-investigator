@@ -83,7 +83,7 @@ with st.expander("Developer Debug Info"):
     st.write("Attempts:", st.session_state.attempts)
     st.write("Score:", st.session_state.score)
     st.write("Difficulty:", difficulty)
-    st.write("History:", st.session_state.history)
+    st.write("Raw history data:", st.session_state.history)
 
 raw_guess = st.text_input(
     "Enter your guess:",
@@ -157,6 +157,14 @@ if submit:
                     f"The secret was {st.session_state.secret}. "
                     f"Score: {st.session_state.score}"
                 )
+
+st.sidebar.subheader("Guess History")
+
+if st.session_state.history:
+    for index, guess in enumerate(st.session_state.history, start=1):
+        st.sidebar.write(f"{index}. {guess}")
+else:
+    st.sidebar.caption("No guesses yet.")                
 
 st.divider()
 st.caption("Built by an AI that claims this code is production-ready.")

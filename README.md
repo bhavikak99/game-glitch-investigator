@@ -46,16 +46,17 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 🧪 Test Results
 
+## 🧪 Test Results
+
 ```text
 $ pytest
-=================== test session starts ===================
+============================= test session starts ==============================
 platform darwin -- Python 3.14.5, pytest-9.1.1, pluggy-1.6.0
-collected 3 items
+collected 6 items
 
-tests/test_game_logic.py ...                        [100%]
+tests/test_game_logic.py ......                                          [100%]
 
-==================== 3 passed in 0.02s ====================
-```
+============================== 6 passed in 0.02s ===============================
 
 ## 🚀 Stretch Features
 
