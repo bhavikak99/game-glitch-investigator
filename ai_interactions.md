@@ -14,7 +14,7 @@ I asked the AI assistant to help plan a feature extension for the guessing game.
 
 **What did the agent do?**
 
-The AI suggested displaying st.session_state.history in the sidebar. I updated app.py to add Guess History section that lists each guess during the game and shows "No guesses yet" before the first guess.
+The AI suggested displaying st.session_state.history in the sidebar. I updated app.py to add Guess History section that lists each guess during the game and shows "No guesses yet" before the first guess. The agent also suggested an enhanced UI feature using Hot/Warm/Cold feedback based on how close a guess is to the secreet number.
 
 **What did you have to verify or fix manually?**
 

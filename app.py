@@ -30,6 +30,19 @@ def update_score(current_score: int, outcome: str, attempt_number: int):
         return current_score - 5
 
     return current_score
+def get_temperature_hint(guess: int, secret: int):
+    difference = abs(guess - secret)
+
+    if difference == 0:
+        return "🎯 Perfect match!"
+
+    if difference <= 5:
+        return "🔥 Very hot! You're extremely close."
+
+    if difference <= 15:
+        return "🌡️ Warm. You're getting close."
+
+    return "🥶 Cold. You're far from the secret number."
 
 st.set_page_config(page_title="Glitchy Guesser", page_icon="🎮")
 
@@ -135,6 +148,7 @@ if submit:
 
         if show_hint:
             st.warning(message)
+            st.info(get_temperature_hint(guess_int, st.session_state.secret))
 
         st.session_state.score = update_score(
             current_score=st.session_state.score,
