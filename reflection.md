@@ -48,6 +48,7 @@ For the hint bug, I tested guesses above and below the secret number and confirm
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 
+Streamlit reruns the whole script whenever the user interacts with a botton or input. So normal variables can reset. st.session_state is like the app's memory because it keeps values such as the secret number, score, attempts, status and history across reruns. 
 ---
 
 ## 5. Looking ahead: your developer habits
@@ -56,3 +57,5 @@ For the hint bug, I tested guesses above and below the secret number and confirm
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+
+I want to reuse testing one bug at a time instead of trying to fix everything at once. I also want to keep using pytest. Next time I work with AI on code I would ask it to explain the logic before asking it to fix. Th project made me realize that AI generated code can look great but still contain bugs. So I need to verify it with my own tests. 
